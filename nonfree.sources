@@ -1,0 +1,17 @@
+Types: deb
+URIs: http://deb.debian.org/debian
+Suites: bookworm
+Components: non-free
+Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
+
+Types: deb
+URIs: http://deb.debian.org/debian-security
+Suites: bookworm-security
+Components: non-free
+Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
+
+Types: deb
+URIs: http://deb.debian.org/debian
+Suites: bookworm-updates
+Components: non-free
+Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
