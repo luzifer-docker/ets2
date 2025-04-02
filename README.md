@@ -15,6 +15,8 @@ To automatically install the required files provide a `.tar.gz` file containing 
 
 Using the `GAMEDATA_URL` mechanic you could for example use an `emptyDir` deployment on Kubernetes to avoid storing the gamefiles. This is not recommended though as it requires downloading the Steam client and gamefiles on every launch.
 
+You also can provide a mount (i.e. a `ConfigMap`) to `/config` with the three required configuration files. They will automatically get copied over to the gamedir.
+
 To connect (without setting up port-forwarding) see the `server.log.txt` in the gamefiles directory and copy the search-id from there. If you set the `server_logon_token`, this should be stable and you should be able to bookmark it.
 
 ## Updating
