@@ -14,6 +14,7 @@ apt-get install --no-install-recommends -y \
   curl \
   libatomic1 \
   libx11-6 \
+  rsync \
   steamcmd
 rm -rf /var/lib/apt/lists/*
 

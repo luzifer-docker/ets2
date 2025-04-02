@@ -7,12 +7,19 @@ GAMEDIR="${SHARE}/Euro Truck Simulator 2"
 
 function install_gamedata() {
   # Check if GAMEDATA_URL is set to download and install
-  [[ -n ${GAMEDATA_URL:-} ]] || {
-    log "No GAMEDATA_URL provided, skipping gamedata-install"
+  if [[ -n ${GAMEDATA_URL:-} ]]; then
+    log "Installing server config from ${GAMEDATA_URL}..."
+    curl -sSfL "${GAMEDATA_URL}" | tar -xz -C "${GAMEDIR}"
     return 0
-  }
+  fi
 
-  curl -sSfL "${GAMEDATA_URL}" | tar -xz -C "${GAMEDIR}"
+  if [[ -e /config/server_config.sii ]]; then
+    log "Installing server config from /config/..."
+    rsync -rv /config/ "${GAMEDIR}/"
+    return 0
+  fi
+
+  log "No sources provided, skipping gamedata-install"
 }
 
 function log() {
