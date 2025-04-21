@@ -15,7 +15,7 @@ function install_gamedata() {
 
   if [[ -e /config/server_config.sii ]]; then
     log "Installing server config from /config/..."
-    rsync -rv /config/ "${GAMEDIR}/"
+    cp -L /config/* "${GAMEDIR}/"
     return 0
   fi
 
