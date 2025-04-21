@@ -1,4 +1,4 @@
-FROM debian:12
+FROM debian:12.10
 
 ENV DUMB_INIT_VERSION=1.2.1 \
     GOSU_VERSION=1.10 \
