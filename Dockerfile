@@ -1,4 +1,4 @@
-FROM debian:12.11@sha256:562665545b4070ef8d4e2fef66c9abc37a39b749f58a11bda5d7120f6cb327b3
+FROM debian:12.11@sha256:731dd1380d6a8d170a695dbeb17fe0eade0e1c29f654cf0a3a07f372191c3f4b
 
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
